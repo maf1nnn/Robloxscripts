@@ -1,0 +1,13 @@
+---- I was too lazy to obfuscate it ----
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+
+for _, idk in ipairs(char:GetDescendants()) do
+	if idk:IsA("MeshPart") then
+		idk.TextureID = "rbxassetid://132853740483966"
+	end
+end
+local Config = char.Config
+Config.NormalTexture.Texture = "rbxassetid://132853740483966"
+Config.HurtTexture.Texture = "rbxassetid://131582510874824"
+Config.BlinkTexture.Texture = "rbxassetid://70403016415154"
